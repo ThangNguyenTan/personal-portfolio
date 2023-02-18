@@ -1,0 +1,1095 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #fff;
+  background-color: #1f2029;
+  overflow: hidden;
+  height: 100vh;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  perspective: 800px;
+}
+
+.wrapper {
+  overflow: hidden;
+  perspective: 800px;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+::selection {
+  color: #c4c3ca;
+  background-color: #000;
+}
+
+::-moz-selection {
+  color: #c4c3ca;
+  background-color: #000;
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.clear-row {
+  flex: 100%;
+  max-width: 100%;
+}
+
+/* #Cursor
+================================================== */
+
+.cursor,
+.cursor2,
+.cursor3 {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  mix-blend-mode: difference;
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+
+.cursor {
+  background-color: #fff;
+  height: 0;
+  width: 0;
+  z-index: 99999;
+}
+
+.cursor2,
+.cursor3 {
+  height: 36px;
+  width: 36px;
+  z-index: 99998;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.cursor2.hover,
+.cursor3.hover {
+  -webkit-transform: scale(2) translateX(-25%) translateY(-25%);
+  transform: scale(2) translateX(-25%) translateY(-25%);
+  border: none;
+}
+
+.cursor2 {
+  border: 2px solid #fff;
+}
+
+.cursor2.hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: transparent;
+}
+
+/* #Primary style
+================================================== */
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+  background-image: url("https://images.pexels.com/photos/34140/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1) rotateX(0);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+  transform-origin: center top;
+}
+
+.hero-section h1 {
+  color: #fff;
+  font-size: 5vw;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero-section .dancing {
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 1px;
+  color: #866baf;
+  font-size: 26px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.hero-section p {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.hero-section p span {
+  margin-left: 15px;
+  margin-right: 15px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding-bottom: 35px;
+}
+
+.hero-section p span:before {
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: -15px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/down.svg");
+  opacity: 0.2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.hero-section p span:hover:before {
+  opacity: 1;
+  bottom: 5px;
+}
+
+body.about-on .hero-section {
+  transform: rotateY(-10deg);
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+
+body.contact-on .hero-section {
+  transform: rotateY(10deg);
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+
+body.project-on .hero-section {
+  transform: rotateX(-10deg);
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+
+body.skill-on .hero-section {
+  transform: scale(0.75);
+  -webkit-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+
+.about-text {
+  position: absolute;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  top: 50%;
+  left: 40px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  transform: translateY(-50%);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.about-text:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -25px;
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/left.svg");
+  opacity: 0.2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.about-text:hover:before {
+  opacity: 1;
+  left: -30px;
+}
+
+.about-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  overflow: auto;
+  min-height: 100vh;
+  padding: 100px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(31, 32, 41, 1);
+  transform: translateX(-100%);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 10;
+}
+
+body.about-on .about-section {
+  transform: translateX(0);
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.about-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/close.svg");
+  cursor: pointer;
+  z-index: 11;
+}
+
+.about-close:hover {
+  transform: rotate(90deg);
+}
+
+.skill-section .container {
+  position: relative;
+}
+
+.skill-section .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skill-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  overflow: auto;
+  padding: 100px 0;
+  min-height: 100vh;
+  background-color: rgba(31, 32, 41, 1);
+  transform: translateY(-100%);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 10;
+}
+
+body.skill-on .skill-section {
+  transform: translateY(0);
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.skill-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/close.svg");
+  cursor: pointer;
+  z-index: 11;
+}
+
+.skill-close:hover {
+  transform: rotate(90deg);
+}
+
+.project-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgba(31, 32, 41, 1);
+  transform: translateY(100%);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 10;
+}
+
+body.project-on .project-section {
+  transform: translateY(0);
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.project-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/close.svg");
+  cursor: pointer;
+  z-index: 11;
+}
+
+.project-close:hover {
+  transform: rotate(90deg);
+}
+
+.section-center {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.about-section img {
+  width: 250px;
+  height: 300px;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-section p span {
+  font-family: "Dancing Script", cursive;
+  letter-spacing: 1px;
+  color: #866baf;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.contact-text {
+  position: absolute;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  top: 50%;
+  right: 40px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  transform: translateY(-50%) rotate(180deg);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.contact-text:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -25px;
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/left.svg");
+  opacity: 0.2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.contact-text:hover:before {
+  opacity: 1;
+  left: -30px;
+}
+
+.project-text {
+  position: absolute;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  left: 50%;
+  bottom: 0px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  transform: translate(-50%, -50%) rotate(270deg);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.project-text:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -30px;
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/left.svg");
+  opacity: 0.2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.project-text:hover:before {
+  opacity: 1;
+  left: -35px;
+}
+
+.skill-text {
+  position: absolute;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  left: 50%;
+  top: 40px;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.skill-text:before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 15px;
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/left.svg");
+  opacity: 0.2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  transform: rotate(180deg);
+}
+
+.skill-text:hover:before {
+  opacity: 1;
+  left: 20px;
+}
+
+.contact-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: block;
+  overflow: auto;
+  padding: 100px 0;
+  min-height: 100vh;
+  background-color: rgba(31, 32, 41, 1);
+  transform: translateX(100%);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 10;
+}
+
+body.contact-on .contact-section {
+  transform: translateX(0);
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.contact-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/close.svg");
+  cursor: pointer;
+  z-index: 11;
+}
+
+.contact-close:hover {
+  transform: rotate(90deg);
+}
+
+.contact-section h3 {
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  display: inline-block;
+}
+
+.contact-section .social a {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #866baf;
+}
+
+
+
+
+
+
+.project-section {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  padding: 100px 0;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(31, 32, 41, 1);
+  -webkit-transition: all 300ms linear;
+  transition: all 300ms linear;
+  z-index: 10;
+}
+
+.project-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  display: block;
+  overflow: hidden;
+  height: 30px;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 36px 36px;
+  background-image: url("http://www.ivang-design.com/svg-load/portfolio/close.svg");
+  cursor: pointer;
+  z-index: 11;
+}
+
+.project-close:hover {
+  transform: rotate(90deg);
+}
+
+body.project-on .project-section {
+  top: 0;
+  -webkit-transition-delay: 400ms;
+  transition-delay: 400ms;
+}
+
+.project-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-section h3 {
+  font-size: 44px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.project-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.project-section p span {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #866baf;
+}
+
+.github a,
+.linkedin a,
+.codepen a {
+  color: #fff;
+}
+
+/*Add*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 70px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+
+[type="checkbox"]:checked+label,
+[type="checkbox"]:not(:checked)+label {
+  position: relative;
+  padding-left: 12px;
+  padding-right: 12px;
+  cursor: pointer;
+  line-height: 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: 10px;
+  margin-left: 10px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="checkbox"]:checked:hover+label:before,
+[type="checkbox"]:not(:checked):hover+label:before,
+[type="checkbox"]:checked:hover+label:after,
+[type="checkbox"]:not(:checked):hover+label:after {
+  opacity: 0.7;
+}
+
+[type="checkbox"]:checked+label:before,
+[type="checkbox"]:not(:checked)+label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 3px;
+  background-color: transparent;
+  z-index: -1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="checkbox"]:checked+label:after,
+[type="checkbox"]:not(:checked)+label:after {
+  content: "";
+  width: calc(100% - 8px);
+  border-radius: 2px;
+  height: 22px;
+  background-color: #e74c3c;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: -1;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+[type="checkbox"]:not(:checked)+label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+[type="checkbox"]:checked+label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* #Colors
+================================================== */
+
+.checkbox-alizarin:checked+label:before,
+.checkbox-alizarin:not(:checked)+label:before {
+  border: 1px solid #e74c3c;
+}
+
+.checkbox-alizarin:checked+label:after,
+.checkbox-alizarin:not(:checked)+label:after {
+  background-color: #e74c3c;
+}
+
+.checkbox-belizehole:checked+label:before,
+.checkbox-belizehole:not(:checked)+label:before {
+  border: 1px solid #2980b9;
+}
+
+.checkbox-belizehole:checked+label:after,
+.checkbox-belizehole:not(:checked)+label:after {
+  background-color: #2980b9;
+}
+
+.box {
+  border-radius: 10px;
+  /*box-shadow: 6px 7px 28px 0 rgba(16, 16, 16, 0.7);*/
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: transparent !important;
+  padding: 0;
+  width: 31.5%;
+}
+
+.box.alizarin {
+  background-color: #e74c3c;
+}
+
+.box.wisteria {
+  background-color: #8e44ad;
+}
+
+.box.emerland {
+  background-color: #2ecc71;
+}
+
+.box.belizehole {
+  background-color: #2980b9;
+}
+
+.box.sunflower {
+  background-color: #f1c40f;
+}
+
+.box.alizarin,
+.box.wisteria,
+.box.emerland,
+.box.belizehole,
+.box.sunflower {
+  opacity: 0;
+  min-height: 0;
+  max-width: 0;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.checkbox-alizarin:checked~.box.alizarin,
+.checkbox-wisteria:checked~.box.wisteria,
+.checkbox-emerland:checked~.box.emerland,
+.checkbox-belizehole:checked~.box.belizehole,
+.checkbox-sunflower:checked~.box.sunflower {
+  opacity: 1;
+  min-height: 250px;
+  max-width: 100%;
+  min-width: calc(25% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+
+/*Loading*/
+.loading-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 5em;
+  letter-spacing: 0.085em;
+  margin: 4.5rem 0 1rem;
+}
+
+.loading-title {
+  font-family: "Fjalla One", sans-serif;
+}
+
+.loading {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 10px;
+  left: 0;
+  background: #000;
+  transition: 0.75s;
+}
+
+.loading-title {
+  color: #fff;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-progress {
+  height: 11px;
+  background: #fff;
+  top: -11px;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  transition: 0.35s;
+}
+
+/*Contact*/
+.contact-section .container .row:nth-child(2) {
+  padding-top: 50px;
+}
+
+.contact-item {
+  display: inline-block;
+  padding: 60px 0;
+  border-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  max-width: 30%;
+}
+
+.contact-item:hover {
+  box-shadow: 0px 0px 20px #fff;
+  color: #e74c3c;
+}
+
+.contact-item h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.contact-item i {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+
+/*Work Item*/
+.work-item {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.work-item img {
+  height: 100%;
+}
+
+.work-item:hover .work-item-desc {
+  opacity: 1;
+}
+
+.work-item-desc {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(68, 72, 87, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.work-item-desc ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.work-item-desc ul li {
+  width: 48%;
+}
+
+.work-item-desc ul li a {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 5px;
+  border: 1px solid #fff;
+  background-color: #444857;
+  text-align: center;
+}
+
+.work-item-desc ul li a:hover {
+  background-color: #fff;
+}
+
+.work-item-desc ul li a i {
+  color: #fff;
+}
+
+.work-item-desc ul li a:hover i {
+  color: #444857;
+}
+
+/*Card*/
+.skill-item {
+  width: 300px;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  font-family: consolas;
+}
+
+.skill-item:hover .face.face1 {
+  background-color: #ff0057;
+  transform: translateY(0);
+}
+
+.skill-item:hover .face.face2 {
+  transform: translateY(0);
+}
+
+.skill-item:hover .face.face1 h4,
+.skill-item:hover .face.face1 img {
+  opacity: 1;
+}
+
+.skill-item img {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.face.face1 {
+  text-align: center;
+  padding: 30px 20px;
+  transform: translateY(110px);
+  position: relative;
+  z-index: 3;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+.skill-item:last-child {
+  transform: translateY(-20px);
+}
+
+.face.face1 h4 {
+  color: #fff;
+  margin-top: 20px;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.face.face1 img {
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.face.face2 {
+  padding: 20px;
+  background-color: #fff;
+  transform: translateY(-110px);
+  transition: all 0.3s ease;
+}
+
+.face.face2 a {
+  display: inline-block;
+  color: #000;
+  border: 1px solid #000;
+  margin-top: 10px;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.face.face2 p {
+  color: #1f2029;
+}

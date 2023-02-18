@@ -1,0 +1,146 @@
+@media screen and (max-width: 1200px) {
+
+    .cursor,
+    .cursor2,
+    .cursor3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .hero-section .dancing {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .contact-section a {
+        font-size: 17px;
+    }
+
+    .contact-text,
+    .about-text {
+        top: 70%;
+    }
+
+    .project-section .section {
+        padding-top: 0px;
+    }
+
+    .about-section .section-center {
+        top: 420px;
+    }
+
+    .skill-section .section-center {
+        top: 720px;
+    }
+
+    .contact-section .section-center {
+        top: 550px;
+    }
+
+    .contact-section h3 {
+        font-size: 44px;
+    }
+
+    .contact-section .social a {
+        margin-left: 3px;
+        margin-right: 3px;
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+    .project-section .section {
+        padding-top: 0px;
+    }
+
+    /*Card*/
+    .skill-item {
+        margin-bottom: 20px;
+    }
+
+    .skill-item:hover .face.face1 {
+        background-color: #ff0057;
+        transform: translateY(0);
+    }
+
+    .skill-item:hover .face.face2 {
+        transform: translateY(0);
+    }
+
+    .skill-item:hover .face.face1 h4,
+    .skill-item:hover .face.face1 img {
+        opacity: 1;
+    }
+
+    .face.face1 {
+        transform: translateY(0) !important;
+    }
+
+    .skill-item:last-child {
+        transform: translateY(0) !important;
+    }
+
+    .face.face2 {
+        transform: translateY(0) !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .skill-item:last-child {
+        transform: translateY(-20px) !important;
+    }
+
+    .work-item {
+        width: 47.5% !important;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .checkbox-alizarin:checked~.box.alizarin,
+    .checkbox-wisteria:checked~.box.wisteria,
+    .checkbox-emerland:checked~.box.emerland,
+    .checkbox-belizehole:checked~.box.belizehole,
+    .checkbox-sunflower:checked~.box.sunflower {
+        min-width: calc(33.333333333333% - 20px);
+    }
+}
+
+@media (max-width: 991px) {
+
+    .checkbox-alizarin:checked~.box.alizarin,
+    .checkbox-wisteria:checked~.box.wisteria,
+    .checkbox-emerland:checked~.box.emerland,
+    .checkbox-belizehole:checked~.box.belizehole,
+    .checkbox-sunflower:checked~.box.sunflower {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 575px) {
+
+    .checkbox-alizarin:checked~.box.alizarin,
+    .checkbox-wisteria:checked~.box.wisteria,
+    .checkbox-emerland:checked~.box.emerland,
+    .checkbox-belizehole:checked~.box.belizehole,
+    .checkbox-sunflower:checked~.box.sunflower {
+        min-width: calc(100% - 20px);
+    }
+}
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .contact-item {
+        max-width: 96%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .contact-item {
+        max-width: 48%;
+    }
+}
