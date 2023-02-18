@@ -81,11 +81,11 @@ const projectData = [
     tag: "belizehole"
   },
   {
-    imageURL: "./img/work-item-img-17.png",
-    name: "Book Store",
-    tools: "Node.js, React.js, Ant Design, MongoDB",
-    demoURL: "https://bookstore-tanthang.netlify.app/",
-    codeURL: "https://github.com/NguyenTanThang/React-JS-BookStore",
+    imageURL: "./img/bookworm.PNG",
+    name: "Bookworm Store",
+    tools: "Node.js, React.js, Reactstrap, PostgreSQL",
+    demoURL: "https://bookworm-app-frontend.vercel.app/",
+    codeURL: "https://github.com/ThangNguyenTan/bookworm-app-frontend",
     tag: "belizehole"
   },
   {
