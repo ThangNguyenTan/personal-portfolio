@@ -89,6 +89,14 @@ const projectData = [
     tag: "belizehole"
   },
   {
+    imageURL: "./img/ams.PNG",
+    name: "Asset Management System",
+    tools: "Node.js, React.js, Reactstrap, PostgreSQL",
+    demoURL: "https://asset-management-system-front-end.vercel.app/",
+    codeURL: "https://github.com/ThangNguyenTan/asset-management-system-front-end",
+    tag: "belizehole"
+  },
+  {
     imageURL: "./img/work-item-img-1.jpg",
     name: "Fesco",
     tools: "HTML, CSS, Bootstrap",
